@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const parser = require('body-parser');
-const MongoClient = require('mongod').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
 app.use(parser.json());
 const publicPath = path.join(__dirname, '../client/public');
