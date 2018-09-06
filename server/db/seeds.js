@@ -61,7 +61,7 @@ db.words.insertMany([
     chinese: "學習",
     german: "Lehrnen",
     dutch: "Leren"
-  },
+  }
 
 
 ]);
