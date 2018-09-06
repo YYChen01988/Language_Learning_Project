@@ -13,7 +13,6 @@ db.words.insertMany([
     chinese: "飢餓",
     german: "Hungrig",
     dutch: "Hongerig"
-
   },
   {
     english: "Swim",
