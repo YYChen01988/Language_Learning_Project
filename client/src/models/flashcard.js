@@ -1,14 +1,18 @@
-// const Request = require('../helpers/request.js');
-// const PubSub = require('../helpers/pub_sub.js');
-//
-// const Flashcard = function () {
-//   this.request = new Request(this.url);
-// };
+const Request = require('../helpers/request.js');
+const PubSub = require('../helpers/pub_sub.js');
 
-// Flashcard.prototype.
-// getData = function(){
-//   this.request.get().then(() => {
-//
-//     // PubSub.publish('Flashcard:words_data_loaded', words);
-//   }).catch(console.error);
-// };
+const Flashcard = function(url) {
+  this.url = url;
+  this.request = new Request(url);
+};
+
+Flashcard.prototype.getData = function(){
+  this.request.get()
+  .then((languages) => {
+    PubSub.publish('Languages:languages-data-ready', languages);
+    // console.log(languages);
+  })
+  .catch(console.error);
+};
+
+module.exports = Flashcard;
