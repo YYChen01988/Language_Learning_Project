@@ -3,63 +3,63 @@ db.dropDatabase();
 
 db.words.insertMany([
   {
-    english: "Thank you",
-    chinese: "你好",
-    german: "Danke",
-    dutch: "Dank je"
+    English: "Thank you",
+    translation: {Chinese: "你好",
+                  German: "Danke",
+                  Dutch: "Dank je"}
   },
   {
-    english: "Hungry",
-    chinese: "飢餓",
-    german: "Hungrig",
-    dutch: "Hongerig"
+    English: "Hungry",
+    translation: {Chinese: "飢餓",
+    German: "Hungrig",
+    Dutch: "Hongerig"}
   },
   {
-    english: "Swim",
-    chinese: "游泳",
-    german: "Schwimmen",
-    dutch: "Zwemmen"
+    English: "Swim",
+    translation: {Chinese: "游泳",
+    German: "Schwimmen",
+    Dutch: "Zwemmen"}
   },
   {
-    english: "Please",
-    chinese: "請",
-    german: "Bitte",
-    dutch: "Alsjeblieft"
+    English: "Please",
+    translation: {Chinese: "請",
+    German: "Bitte",
+    Dutch: "Alsjeblieft"}
   },
   {
-    english: "Beer",
-    chinese: "啤酒",
-    german: "Bier",
-    dutch: "Bier"
+    English: "Beer",
+    translation: {Chinese: "啤酒",
+    German: "Bier",
+    Dutch: "Bier"}
   },
   {
-    english: "Wine",
-    chinese: "紅酒",
-    german: "Wein",
-    dutch: "Wijn"
+    English: "Wine",
+    translation: {Chinese: "紅酒",
+    German: "Wein",
+    Dutch: "Wijn"}
   },
   {
-    english: "Cycling",
-    chinese: "循環",
-    german: "Radfahren",
-    dutch: "Fietsen"
+    English: "Cycling",
+    translation: {Chinese: "循環",
+    German: "Radfahren",
+    Dutch: "Fietsen"}
   },
   {
-    english: "Good day",
-    chinese: "美好的一天",
-    german: "Schönen Tag",
-    dutch: "Goede dag"
+    English: "Good day",
+    translation: {Chinese: "美好的一天",
+    German: "Schönen Tag",
+    Dutch: "Goede dag"}
   },
   {
-    english: "Goodbye",
-    chinese: "再見",
-    german: "Auf Wiedersehen",
-    dutch: "Vaarwel"
+    English: "Goodbye",
+    translation: {Chinese: "再見",
+    German: "Auf Wiedersehen",
+    Dutch: "Vaarwel"}
   },
   {
-    english: "Learning",
-    chinese: "學習",
-    german: "Lehrnen",
-    dutch: "Leren"
+    English: "Learning",
+    translation: {Chinese: "學習",
+    German: "Lehrnen",
+    Dutch: "Leren"}
   }
 ]);
