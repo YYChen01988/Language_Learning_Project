@@ -62,6 +62,4 @@ db.words.insertMany([
     german: "Lehrnen",
     dutch: "Leren"
   }
-
-
 ]);
