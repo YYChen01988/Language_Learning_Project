@@ -15,21 +15,4 @@ Flashcard.prototype.getData = function(){
   .catch(console.error);
 };
 
-
 module.exports = Flashcard;
-
-
-
-
-
-
-
-
-
-// Countries.prototype.bindEvents = function () {
-//   PubSub.subscribe('SelectView:change', (evt) => {
-//     selectedIndex = evt.detail;
-//     const selectedCountry = this.countries[selectedIndex];
-//     PubSub.publish('Countries:selected-country-ready', selectedCountry);
-//   });
-// };
