@@ -4,12 +4,13 @@ const path = require('path');
 const parser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
-app.use(parser.json());
 const publicPath = path.join(__dirname, '../client/public');
+app.use(parser.json());
+app.use(express.static(publicPath));
 
 
 MongoClient.connect('mongodb://localhost:27017')
-.then((clinet) => {
+.then((client) => {
   const db = client.db('languages');
   const languagesCollection = db.collection('words');
   const languagesRouter = createRouter(languagesCollection);
