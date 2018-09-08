@@ -18,15 +18,16 @@ FlashcardSelectView.prototype.bindEvents = function() {
 
 FlashcardSelectView.prototype.populate = function(languages) {
   // console.log(languages);
-  languages.forEach((language, index) => {
-    const languageOption = this.createOption(Object.keys(language.translation), index);
-    languageOption.forEach(a)=>{
-    }
-    // console.log(languageOption);
-    this.element.appendChild(languageOption);
-    // console.log('each lang translation keys', Object.keys(language.translation));
-    // console.log(languageOption);
-  })
+  var languageOptions = [];
+ languages.forEach((language, index) => {
+   languageOptions = languageOptions.concat(Object.keys(language.translation));
+ })
+ languageOptions = new Set([...languageOptions]);
+ console.log(languageOptions);
+ languageOptions.forEach((element, index) => {
+   const languageElement = this.createOption(element, index);
+   this.element.appendChild(languageElement);
+ });
 }
 
 FlashcardSelectView.prototype.createOption = function(name, index) {
