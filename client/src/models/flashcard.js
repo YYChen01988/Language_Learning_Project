@@ -28,12 +28,11 @@ Flashcard.prototype.publishByLanguage = function(languages){
 
   PubSub.subscribe("FlashcardSelectView:language-name-selected", (event) => {
     const selectedLanguageWords =[];
-
     languages.forEach((language) => {
       // console.log(language, event);
       const selectedKeys=Object.keys(language.translation);
       if (selectedKeys.includes(event.detail)){
-        selectedLanguageWords.push(language.translation[event.detail]);
+        selectedLanguageWords.push([language.translation[event.detail], language.English]);
       };
     });
     console.log(selectedLanguageWords);
