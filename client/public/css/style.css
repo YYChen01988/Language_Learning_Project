@@ -1,4 +1,113 @@
+html {
+  background-color: #e9e9e9;
+}
+
+main {
+  max-width: 750px;
+  margin: auto;
+  clear: left;
+}
+
+#language-dropdown {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.button1 {
+    background-color: #4CAF50;
+    color: white;
+    width: 25%;
+}
+
+.button1:hover {
+    background-color: #338836;
+    color: white;
+
+}
+
+.button2 {
+    background-color: #008CBA;
+    color: white;
+    width: 25%;
+}
+
+.button2:hover {
+    background-color: #007399;
+    color: white;
+}
+
 h1, h3 {
-  font-family: 'Open Sans', sans-serif;
-  color: blue;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 20%;
+    height: 400px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 60%;
+    border-left: none;
+    height: 400px;
+    background-color: white;
 }
