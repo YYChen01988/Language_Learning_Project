@@ -4,13 +4,13 @@ const PubSub = require('../helpers/pub_sub.js');
 const Flashcard = function(url) {
   this.url = url;
   this.request = new Request(url);
-  this.languageData = [];
+  this.languages = [];
 };
 
 Flashcard.prototype.bindEvents = function(){
-  PubSub.subscribe("FlashcardSelectView:language_name-selected", (event) => {
-    this.publishWordsByLanguage(languageSelect);
-  });
+  // PubSub.subscribe("FlashcardSelectView:language-name-selected", (event) => {
+  //
+  // });
 }
 
 Flashcard.prototype.getData = function(){
@@ -35,15 +35,9 @@ Flashcard.prototype.publishByLanguage = function(languages){
         selectedLanguageWords.push([language.translation[event.detail], language.English]);
       };
     });
-    console.log(selectedLanguageWords);
+    PubSub.publish("Flashcard:selected-language-and-answer", selectedLanguageWords);
+    // console.log(selectedLanguageWords);
   });
 };
-
-
-
-
-
-
-
 
 module.exports = Flashcard;
