@@ -15,4 +15,29 @@ Flashcard.prototype.getData = function(){
   .catch(console.error);
 };
 
+
+
+
+
+// CurrencyList.prototype.bindEvents = function(){
+//   PubSub.subscribe("FlashcardSelectView:language_name-selected", (event) => {
+//     var currency_name = event.detail;
+//     var selected_country = [];
+//     this.countries.forEach((country) => {
+//
+//       if(this.currencyIncludes(currency_name, country.currencies)) {
+//         selected_country.push(country);
+//       }
+//     });
+//     // console.log(selected_country)
+//     PubSub.publish("CurrencyList:country-ready", selected_country)
+//   })
+// }
+
+
+
+
+
+
+
 module.exports = Flashcard;

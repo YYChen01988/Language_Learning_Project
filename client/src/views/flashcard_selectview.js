@@ -7,17 +7,16 @@ const FlashcardSelectView = function(selectElement) {
 
 FlashcardSelectView.prototype.bindEvents = function() {
   PubSub.subscribe('Languages:languages-data-ready', (event) => {
-    // console.log(event.detail);
     this.populate(event.detail);
   });
 
-  // this.element.addEventListener('change', (event) => {
-  //   const selectedIndex = event.target.value;
-  // })
+  this.element.addEventListener('change', (event) => {
+    const selectedLanguage = event.target.value;
+    PubSub.publish("FlashcardSelectView:language_name-selected", selectedLanguage);
+  });
 }
 
 FlashcardSelectView.prototype.populate = function(languages) {
-  // console.log(languages);
   var languageOptions = [];
  languages.forEach((language, index) => {
    languageOptions = languageOptions.concat(Object.keys(language.translation));
