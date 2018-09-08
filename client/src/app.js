@@ -15,4 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   selectView.bindEvents();
   flashcard.bindEvents();
 
+
+  const flashcardView = new FlashcardView();
+  flashcardView.bindEvents();
 });
