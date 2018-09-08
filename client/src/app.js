@@ -13,5 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectElement = document.querySelector('select#chosen-language');
   const selectView = new FlashcardSelectView(selectElement);
   selectView.bindEvents();
+  flashcard.bindEvents();
 
 });
