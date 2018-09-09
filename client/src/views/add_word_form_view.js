@@ -20,7 +20,7 @@ AddWordFormView.prototype.handleSubmit = function (event) {
 }
 
 AddWordFormView.prototype.createsWord = function(form){
-  // console.log(form);
+  console.log(form);
   const newWord ={
     English: form.english.value,
     translation: {
