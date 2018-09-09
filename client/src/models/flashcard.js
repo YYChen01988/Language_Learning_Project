@@ -7,55 +7,46 @@ const Flashcard = function(url) {
   this.languages = [];
 };
 
-//map
+// Map
 Flashcard.prototype.languageIncludes = function(languageName, languagesList) {
-for (var i = 0; i< languagesList.length; i++ ) {
-  if(languagesList[i].name == languageName) {
-    return true
-  };
-}
-return false;
+  for (var i = 0; i< languagesList.length; i++ ) {
+    if(languagesList[i].name == languageName) {
+      return true
+    };
+  }
+  return false;
 }
 
 Flashcard.prototype.bindEvents = function(){
-PubSub.subscribe("SelectView:language_name-selected", (event) => {
-  var language_name = event.detail;
-  var selected_country = [];
-  this.countries.forEach((country) => {
+  PubSub.subscribe("SelectView:language_name-selected", (event) => {
+    var language_name = event.detail;
+    var selected_country = [];
+    this.countries.forEach((country) => {
 
-    if(this.languageIncludes(language_name, country.languages)) {
-      selected_country.push(country);
-    }
-  });
-  // console.log(selected_country)
-  PubSub.publish("LanguageList:country-ready", selected_country)
-
-})
+      if(this.languageIncludes(language_name, country.languages)) {
+        selected_country.push(country);
+      }
+    });
+    // console.log(selected_country)
+    PubSub.publish("LanguageList:country-ready", selected_country)
+  })
 }
 
 Flashcard.prototype.getCountryLocations = function(selectedLanguage){
-
-const request = new Request("https://restcountries.eu/rest/v2/all");
-
-request.get()
-  .then((data) => {
-
-this.countries = data;
-var matchingCountries = this.countries.filter((country) => {
-  return country.languages.filter((language) => {
-    return (language.name === selectedLanguage)
-  }).length;
-});
-
-PubSub.publish("Map:countries-objects-ready", matchingCountries);
-});
+  const request = new Request("https://restcountries.eu/rest/v2/all");
+  request.get()
+    .then((data) => {
+  this.countries = data;
+  var matchingCountries = this.countries.filter((country) => {
+    return country.languages.filter((language) => {
+      return (language.name === selectedLanguage)
+    }).length;
+  });
+  PubSub.publish("Map:countries-objects-ready", matchingCountries);
+  });
 };
 
-
-
-
-
-//flashcard
+// Flashcard
 Flashcard.prototype.bindEvents = function(){
   PubSub.subscribe('AddWordFormView:item-submitted', (event) => {
     this.postWord(event.detail);
