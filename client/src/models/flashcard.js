@@ -3,17 +3,15 @@ const PubSub = require('../helpers/pub_sub.js');
 
 const Flashcard = function(url) {
   this.url = url;
-  this.request = new Request(url);
+  this.request = new Request(this.url);
   this.languages = [];
 };
 
-
 Flashcard.prototype.bindEvents = function(){
-
   PubSub.subscribe('AddWordFormView:item-submitted', (event) => {
     this.postWord(event.detail);
   });
-}
+};
 
 Flashcard.prototype.getData = function(){
   this.request.get()

@@ -4,11 +4,12 @@ const AddWordFormView = function (form) {
   this.form = form;
 };
 
-AddWordFormView.prototype.bindEvents = function () {
-  this.form.addEventListener('submit', (event) => {
-  this.handleSubmit(event);
-  })
-};
+// AddWordFormView.prototype.bindEvents = function () {
+//   this.form.addEventListener('submit', (event) => {
+//   this.handleSubmit(event);
+//   console.log(event);
+//   })
+// };
 
 AddWordFormView.prototype.handleSubmit = function (event) {
   event.preventDefault();
