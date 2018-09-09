@@ -7,12 +7,6 @@ const Flashcard = function(url) {
   this.languages = [];
 };
 
-Flashcard.prototype.bindEvents = function(){
-  // PubSub.subscribe("FlashcardSelectView:language-name-selected", (event) => {
-  //
-  // });
-}
-
 Flashcard.prototype.getData = function(){
   this.request.get()
   .then((languages) => {
@@ -26,7 +20,7 @@ Flashcard.prototype.getData = function(){
 Flashcard.prototype.publishByLanguage = function(languages){
   this.languages = languages;
 
-  PubSub.subscribe("FlashcardSelectView:language-name-selected", (event) => {
+  PubSub.subscribe("SelectView:change", (event) => {
     const selectedLanguageWords =[];
     languages.forEach((language) => {
       // console.log(language, event);

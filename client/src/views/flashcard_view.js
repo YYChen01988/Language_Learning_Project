@@ -1,31 +1,35 @@
 const PubSub = require("../helpers/pub_sub.js");
 
-const FlashcardView = function(container){
-  this.container = container;
+const FlashcardView = function(container, phrase){
+  this.phrasesContainer = container;
+  this.phrase = phrase;
 }
 
-FlashcardView.prototype.bindEvents = function(){
-  PubSub.subscribe("Flashcard:selected-language-and-answer", (event) => {
-    const flashcards = event.detail;
-    // this.container.innerHTML = "";
+// THIS IS WHERE THE FLASHCARD IS RENDERED
 
-    // this.render(flashcards);
-    console.log(flashcards); // -> is array of foreign word + translation
-  })
+FlashcardView.prototype.render = function (flashcard) {
+  const phraseContainer = document.createElement('div');
+  phraseContainer.classList.add('flashcard');
+
+  const foreign = this.createForeignPhrase();
+  phraseContainer.appendChild(foreign);
+
+  const english = this.createEnglishPhrase();
+  phraseContainer.appendChild(english);
+
+  this.phrasesContainer.appendChild(phraseContainer);
 };
 
-// FlashcardView.prototype.render = function(languageList){
-//
-//   const flashcardContainer = document.createElement('div');
-//   flashcardContainer.id = 'flashcard-words';
-//
-//   const foreignWord = this.createForeignWord("Phrase", languageList.foreignWord);
-//   flashcardContainer.appendChild(foreignWord);
-//
-//
-//   this.container.appendChild(flashcardContainer)
-//   // console.log(languageList);
-// };
+FlashcardView.prototype.createForeignPhrase = function() {
+  const foreign = document.createElement('h2');
+  foreign.textContent = this.phrase[0];
+  return foreign;
+}
 
+FlashcardView.prototype.createEnglishPhrase = function() {
+  const english = document.createElement('p');
+  english.textContent = this.phrase[1];
+  return english;
+}
 
 module.exports = FlashcardView;
