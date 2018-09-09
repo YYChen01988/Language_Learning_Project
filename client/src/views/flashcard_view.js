@@ -27,7 +27,7 @@ FlashcardView.prototype.createForeignPhrase = function() {
 }
 
 FlashcardView.prototype.createEnglishPhrase = function() {
-  const english = document.createElement('p');
+  const english = document.createElement('h3');
   english.textContent = this.phrase[1];
   return english;
 }
