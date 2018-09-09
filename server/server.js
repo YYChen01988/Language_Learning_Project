@@ -15,6 +15,9 @@ MongoClient.connect('mongodb://localhost:27017')
   const languagesCollection = db.collection('words');
   const languagesRouter = createRouter(languagesCollection);
   app.use('/api/words', languagesRouter);
+  const quizCollection = db.collection('quiz');
+  const quizRouter = createRouter(quizCollection);
+  app.use('/api/quiz', quizRouter);
 }).catch(console.err);
 
 app.listen(3000, function () {

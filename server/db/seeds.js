@@ -63,3 +63,32 @@ db.words.insertMany([
                   Dutch: "Leren"}
   }
 ]);
+db.quiz.insertMany([
+  {"Chinese": [
+  {
+    question: "Hello",
+    answer: "Jobby",
+    possible: {one: "Wee Jobby",
+              two: "Big Jobby",
+              three: "Jobby",
+              four: "Job"}
+  }]},
+  {"German": [
+  {
+    question: "Hello",
+    answer: "Jobby",
+    possible: {one: "Wee Jobby",
+              two: "Big Jobby",
+              three: "Jobby",
+              four: "Job"}
+  }]},
+  {"Dutch": [
+  {
+    question: "Hello",
+    answer: "Jobby",
+    possible: {one: "Wee Jobby",
+              two: "Big Jobby",
+              three: "Jobby",
+              four: "Job"}
+  }]},
+]);

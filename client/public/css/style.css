@@ -100,13 +100,6 @@ a {
   box-sizing: border-box
 }
 
-/* Not currently in use - prob delete? */
-
-/* .wrap {
-  margin: auto;
-  width: 100%;
-} */
-
 /* LEFT HAND BOX WITH TABS */
 
 .tab {
@@ -169,4 +162,76 @@ a {
 
 .translate-function{
   color: white;
+}
+
+/* ADD PHRASE FORM */
+
+form {
+  width: 85%;
+  margin: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type=text] {
+  width: 100%;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #cccccc;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #008CBA;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  float: right;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #007399;
+} */
+
+.box {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-30 {
+  float: left;
+  width: 40%;
+}
+
+.col-70 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
 }
