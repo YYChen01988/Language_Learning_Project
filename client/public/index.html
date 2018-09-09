@@ -1,99 +1,100 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Language App</title>
-    <script src="/js/bundle.js"></script>
-    <script src="/js/scripts.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Language App</title>
+   <script src="/js/bundle.js"></script>
+   <script src="/js/scripts.js"></script>
+   <link rel="stylesheet" href="/css/style.css">
+ </head>
 
-  <img src="images/bar.jpg" alt="BBC navigation" class="responsive">
+ <img src="images/bar.jpg" alt="BBC navigation" class="responsive">
 
-  <main>
-    <body>
+ <main>
+   <body>
 
-      <div class id="logo">
-        <center><img src="images/logo.png" width="200px" height="157px" alt="BBC languages logo"></center>
-      </div>
+     <div class id="logo">
+       <center><img src="images/logo.png" width="200px" height="157px" alt="BBC languages logo"></center>
+     </div>
 
-      <div class id="language-dropdown">
-      <!-- <label for="chosen-language">Select a language to learn:</label> -->
-        <select id="chosen-language"><option>Select a language</option></select>
-      </div>
+     <div class id="language-dropdown">
+     <!-- <label for="chosen-language">Select a language to learn:</label> -->
+       <select id="chosen-language"><option>Select a language</option></select>
+     </div>
 
-      <!-- <div class="wrap"> -->
+     <!-- <div class="wrap"> -->
 
-      <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Flashcard')" id="defaultOpen">Flashcard</button>
-        <button class="tablinks" onclick="openTab(event, 'Quiz')">Quiz</button>
-        <button class="tablinks" onclick="openTab(event, 'Facts')">Map</button>
-        <button class="tablinks" onclick="openTab(event, 'Admin')">Add phrase</button>
-      </div>
+     <div class="tab">
+       <button class="tablinks" onclick="openTab(event, 'Flashcard')" id="defaultOpen">Flashcard</button>
+       <button class="tablinks" onclick="openTab(event, 'Quiz')">Quiz</button>
+       <button class="tablinks" onclick="openTab(event, 'Facts')">Map</button>
+       <button class="tablinks" onclick="openTab(event, 'Admin')">Add phrase</button>
+     </div>
 
-      <div id="Flashcard" class="tabcontent">
-      <section id="phrases"></section>
-        <center>
-        <button class="button button1">Previous</button>
-        <button class="button button1">Next</button>
-        </center>
-      </div>
+     <div id="Flashcard" class="tabcontent">
+     <section id="phrases"></section>
+       <center>
+       <button class="button button1">Previous</button>
+       <button class="button button1">Next</button>
+       </center>
+     </div>
 
-      <div id="Quiz" class="tabcontent">
-        <h3>Quiz</h3>
-        <p><center>Quiz will go here.</center></p>
-      </div>
+     <div id="Quiz" class="tabcontent">
+       <h3>Quiz</h3>
+       <p><center>Quiz will go here.</center></p>
+     </div>
 
-      <div id="Facts" class="tabcontent">
-        <h3>Facts</h3>
-        <p><center>Facts and map will go here.</center></p>
-      </div>
+     <div id="Facts" class="tabcontent">
+       <h3>Facts</h3>
+       <div id="map-container"></div>
+       <p><center>Facts and map will go here.</center></p>
+     </div>
 
-      <div id="Admin" class="tabcontent">
+     <div id="Admin" class="tabcontent">
 
-        <h3>Add a word to list</h2>
-         <form id=“item-form”>
-           <div>
-             <label for=“english”>English Word:</label>
-             <input type=“text” id=“english” />
+       <h3>Add a word to list</h2>
+        <form id=“item-form”>
+          <div>
+            <label for=“english”>English Word:</label>
+            <input type=“text” id=“english” />
 
-             <label for=“chinese”>Chinese translation:</label>
-             <input type=“text” id=“chinese” />
+            <label for=“chinese”>Chinese translation:</label>
+            <input type=“text” id=“chinese” />
 
-             <label for=“german”>German translation:</label>
-             <input type=“text” id=“german” />
+            <label for=“german”>German translation:</label>
+            <input type=“text” id=“german” />
 
-             <label for=“dutch”>Dutch translation:</label>
-             <input type=“text” id=“dutch” />
-           </div>
+            <label for=“dutch”>Dutch translation:</label>
+            <input type=“text” id=“dutch” />
+          </div>
 
-           <input type="submit" value="Save" id="submit" />
+          <input type="submit" value="Save" id="submit" />
 
-         </form>
-      </div>
+        </form>
+     </div>
 
-    <!-- </div> -->
+   <!-- </div> -->
 
-      <footer>Copyright © 2018 BBC.</footer>
+     <footer>Copyright © 2018 BBC.</footer>
 
 <div class="translate-function">
-    <p>Translate this page in your preferred language:</p>
-    <div id="google_translate_element"></div>
+   <p>Translate this page in your preferred language:</p>
+   <div id="google_translate_element"></div>
 
-    <script type="text/javascript">
+   <script type="text/javascript">
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-  }
+ new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+ }
 </script>
 
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <p>You can translate the content of this page by selecting a language in the select box.</p>
-  </div>
+   <p>You can translate the content of this page by selecting a language in the select box.</p>
+ </div>
 
-  </div>
-  </body>
+ </div>
+ </body>
 </main>
 
 </html>
