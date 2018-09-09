@@ -3,6 +3,8 @@ const Flashcard = require('./models/flashcard.js');
 const FlashcardView = require('./views/flashcard_view.js');
 const FlashcardListView = require('./views/flashcard_list_view');
 const FlashcardSelectView = require('./views/select_view');
+const MapWrapper = require('./views/map_wrapper.js');
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -13,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const flashcardListContainer = document.querySelector('#phrases');
   const flashcardListView = new FlashcardListView(flashcardListContainer);
   flashcardListView.bindEvents();
+
+  const mainMap = document.querySelector('#map-container');
+  const mapWrapper = new MapWrapper(mainMap);
+  // mapWrapper.bindEvents();
 
   const wordsUrl = 'http://localhost:3000/api/words';
   const flashcard = new Flashcard(wordsUrl);
