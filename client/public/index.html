@@ -21,11 +21,8 @@
      </div>
 
      <div class id="language-dropdown">
-     <!-- <label for="chosen-language">Select a language to learn:</label> -->
        <select id="chosen-language"><option>Select a language</option></select>
      </div>
-
-     <!-- <div class="wrap"> -->
 
      <div class="tab">
        <button class="tablinks" onclick="openTab(event, 'Flashcard')" id="defaultOpen">Flashcard</button>
@@ -54,46 +51,62 @@
      </div>
 
      <div id="Admin" class="tabcontent">
-
-       <h3>Add a word to list</h2>
+       <h3>Add a new phrase</h2>
         <form id="item-form">
           <div>
-            <label for="english">English Word:</label>
-            <input type="text" id="english" required/>
-
-            <label for="chinese">Chinese translation:</label>
-            <input type="text" id="chinese" required/>
-
-            <label for="german">German translation:</label>
-            <input type="text" id="german" required/>
-
-            <label for="dutch">Dutch translation:</label>
-            <input type="text" id="dutch" required />
+            <div class="row">
+              <div class="col-30">
+                <label for="english">English phrase:</label>
+              </div>
+              <div class="col-70">
+                <input type="text" id="english" required/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-30">
+                <label for="chinese">Chinese translation:</label>
+              </div>
+              <div class="col-70">
+                <input type="text" id="chinese" required/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-30">
+                <label for="german">German translation:</label>
+              </div>
+              <div class="col-70">
+                <input type="text" id="german" required/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-30">
+                <label for="dutch">Dutch translation:</label>
+              </div>
+              <div class="col-70">
+                <input type="text" id="dutch" required/>
+              </div>
+            </div>
           </div>
-
-          <input type="submit" value="Save" id="submit" />
-
+          <input type="submit" value="Save" id="submit"/>
         </form>
      </div>
 
-   <!-- </div> -->
-
      <footer>Copyright © 2018 BBC.</footer>
 
-<div class="translate-function">
-   <p>Translate this page in your preferred language:</p>
-   <div id="google_translate_element"></div>
+    <div class="translate-function">
+       <p>Translate this page in your preferred language:</p>
+       <div id="google_translate_element"></div>
 
-   <script type="text/javascript">
-function googleTranslateElementInit() {
- new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
- }
-</script>
+       <script type="text/javascript">
+    function googleTranslateElementInit() {
+     new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+     }
+    </script>
 
-   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-   <p>You can translate the content of this page by selecting a language in the select box.</p>
- </div>
+       <p>You can translate the content of this page by selecting a language in the select box.</p>
+     </div>
 
  </div>
  </body>
