@@ -28,7 +28,8 @@
       <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Flashcard')" id="defaultOpen">Flashcard</button>
         <button class="tablinks" onclick="openTab(event, 'Quiz')">Quiz</button>
-        <button class="tablinks" onclick="openTab(event, 'Facts')">Facts</button>
+        <button class="tablinks" onclick="openTab(event, 'Facts')">Map</button>
+        <button class="tablinks" onclick="openTab(event, 'Admin')">Add phrase</button>
       </div>
 
       <div id="Flashcard" class="tabcontent">
@@ -47,6 +48,29 @@
       <div id="Facts" class="tabcontent">
         <h3>Facts</h3>
         <p><center>Facts and map will go here.</center></p>
+      </div>
+
+      <div id="Admin" class="tabcontent">
+
+        <h3>Add a word to list</h2>
+         <form id=“item-form”>
+           <div>
+             <label for=“english”>English Word:</label>
+             <input type=“text” id=“english”/>
+
+             <label for=“chinese”>Chinese translation:</label>
+             <input type=“text” id=“chinese”/>
+
+             <label for=“german”>German translation:</label>
+             <input type=“text” id=“german”/>
+
+             <label for=“dutch”>Dutch translation:</label>
+             <input type=“text” id=“dutch”/>
+           </div>
+
+           <input type="submit" value="Save" id="save"/>
+
+         </form>
       </div>
 
     <!-- </div> -->
