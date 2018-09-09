@@ -8,17 +8,12 @@ const MapCountryFacts = function(container){
 MapCountryFacts.prototype.bindEvents = function(){
   PubSub.subscribe("Map:countries-objects-ready", (event) => {
     const countries = event.detail;
+    this.container.innerHTML = "";
     countries.forEach((country) => {
       const p = document.createElement('p');
       p.textContent = country.name;
       this.container.appendChild(p);
-
-      // var population = country.population;
-      // this.container.appendChild()
-
-
     });
-
   });
 };
 
