@@ -29,8 +29,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapWrapper = new MapWrapper(mainMap);
   // mapWrapper.bindEvents();
 
-  const wordsUrl = 'http://localhost:3000/api/words';
-  const flashcard = new Flashcard(wordsUrl);
-  flashcard.getData();
-
 });
