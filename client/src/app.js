@@ -4,9 +4,9 @@ const FlashcardListView = require('./views/flashcard_list_view');
 const FlashcardSelectView = require('./views/select_view');
 const MapWrapper = require('./views/map_wrapper.js');
 const AddWordFormView = require('./views/add_word_form_view.js');
+const QuizListView = require('./views/quiz_list_view.js');
+const Quiz = require('./models/quiz.js');
 const MapCountryFacts = require('./views/map_country_facts.js');
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
   flashcard.getData();
   flashcard.bindEvents();
 
+  const quizUrl = 'http://localhost:3000/api/quiz';
+  const quiz = new Quiz(quizUrl);
+  quiz.getQuizData();
+  // flashcard.bindEvents();
+
   const selectElement = document.querySelector('select#chosen-language');
   const selectView = new FlashcardSelectView(selectElement);
   selectView.bindEvents();
@@ -22,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const flashcardListContainer = document.querySelector('#phrases');
   const flashcardListView = new FlashcardListView(flashcardListContainer);
   flashcardListView.bindEvents();
+
+  const quizListContainer = document.querySelector('#quiz');
+  const quizListView = new QuizListView(quizListContainer);
+  quizListView.bindEvents();
 
   const mainMap = document.querySelector('#map-container');
   const mapWrapper = new MapWrapper(mainMap);
