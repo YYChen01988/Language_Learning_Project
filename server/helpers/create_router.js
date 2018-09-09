@@ -23,7 +23,7 @@ const createRouter = function(languages){
   // SHOW
   router.get('/:id', (req, res) => {
     const id = req.params.id;
-    collection
+    languages
       .find({ _id: ObjectID(id) })
       .toArray()
       .then((docs) => res.json(docs))
@@ -31,6 +31,25 @@ const createRouter = function(languages){
         console.error(err);
         res.status(500);
         res.json({ status: 500, error: err });
+      });
+  });
+
+  // CREATE
+  router.post('/', (req, res) => {
+    const newWord = req.body;
+    languages
+      .insertOne(newWord)
+      .then(() => {
+        languages
+          .find()
+          .toArray()
+          .then((docs) => {return res.json(docs);
+          })
+          .catch((err) => {
+            console.error(err);
+            res.status(500);
+            res.json({ status: 500, error: err });
+          });
       });
   });
   return router;

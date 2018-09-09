@@ -23,7 +23,7 @@ FlashcardListView.prototype.render = function(flashcards) {
   flashcards.forEach((phrase) => {
     const flashcardView = new FlashcardView(this.container, phrase);
     flashcardView.render();
-    // console.log(phrase);
+    // console.log(this.container);
   })
 }
 

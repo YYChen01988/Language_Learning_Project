@@ -3,8 +3,14 @@ const PubSub = require('../helpers/pub_sub.js');
 
 const Flashcard = function(url) {
   this.url = url;
-  this.request = new Request(url);
+  this.request = new Request(this.url);
   this.languages = [];
+};
+
+Flashcard.prototype.bindEvents = function(){
+  PubSub.subscribe('AddWordFormView:item-submitted', (event) => {
+    this.postWord(event.detail);
+  });
 };
 
 Flashcard.prototype.getData = function(){
@@ -32,6 +38,16 @@ Flashcard.prototype.publishByLanguage = function(languages){
     PubSub.publish("Flashcard:selected-language-and-answer", selectedLanguageWords);
     // console.log(selectedLanguageWords);
   });
+};
+
+Flashcard.prototype.postWord = function(word){
+  // console.log('what is the word:', word);
+  this.request.post(word)
+  .then((languages) => {
+    PubSub.publish('Languages:languages-data-ready', languages);
+    // console.log("languages is:", languages);
+  })
+  .catch(console.error);
 };
 
 module.exports = Flashcard;
