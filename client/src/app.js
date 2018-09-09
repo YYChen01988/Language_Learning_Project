@@ -13,10 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   flashcard.getData();
   flashcard.bindEvents();
 
-  // const addWordForm = document.querySelector("#item-form")
-  // const addWordFormView = new AddWordFormView(addWordForm);
-  // addWordFormView.bindEvents();
-
   const selectElement = document.querySelector('select#chosen-language');
   const selectView = new FlashcardSelectView(selectElement);
   selectView.bindEvents();
@@ -28,5 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainMap = document.querySelector('#map-container');
   const mapWrapper = new MapWrapper(mainMap);
   // mapWrapper.bindEvents();
+
+  const addWordForm = document.querySelector("#item-form")
+  const addWordFormView = new AddWordFormView(addWordForm);
+  addWordFormView.bindEvents();
 
 });
