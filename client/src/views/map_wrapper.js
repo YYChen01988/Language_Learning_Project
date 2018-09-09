@@ -11,7 +11,7 @@ const MapWrapper = function(container){
 
 
 MapWrapper.prototype.bindEvents = function(){
-  PubSub.subscribe("SelectView:change", (event) => {
+  PubSub.subscribe("Map:countries-objects-ready", (event) => {
     // map.removeLayer(marker);
     this.markers.forEach((m)=>{
       this.map.removeLayer(m);
@@ -29,7 +29,6 @@ MapWrapper.prototype.bindEvents = function(){
       m.addTo(this.map);
 
     });
-
 
   });
 };
