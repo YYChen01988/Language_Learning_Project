@@ -5,7 +5,7 @@ const MapWrapper = function(container){
   this.coords = [55.8654192, -4.258020999999999];
   this.map = L.map(this.container);
   this.osmLayer = new L.TileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
-  this.map.setView(this.coords, 8).addLayer(this.osmLayer);
+  this.map.setView(this.coords, 1).addLayer(this.osmLayer);
   this.markers = []
 }
 
@@ -22,7 +22,6 @@ MapWrapper.prototype.bindEvents = function(){
     const countries = event.detail;
     countries.forEach((country) => {
       var coordinates = country.latlng;
-      console.log(coordinates);
       this.map.setView(coordinates,5);
       var m = L.marker(coordinates);
       this.markers.push(m);
