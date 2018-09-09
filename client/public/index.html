@@ -2,52 +2,57 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Language App</title>
     <script src="/js/bundle.js"></script>
     <script src="/js/scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
   </head>
+
+  <img src="images/bar.jpg" alt="BBC navigation" class="responsive">
+
   <main>
-  <body>
+    <body>
 
-    <div class="header">
-      <h1>Language Learning App</h1>
-
-      <div class id="language-dropdown">
-      <label for="chosen-language">Select a language to learn:</label>
-      <select id="chosen-language"><option selected disabled></option></select>
+      <div class id="logo">
+        <center><img src="images/logo.png" width="200px" height="157px" alt="BBC languages logo"></center>
       </div>
 
-    </div>
+      <div class id="language-dropdown">
+      <!-- <label for="chosen-language">Select a language to learn:</label> -->
+        <select id="chosen-language"><option>Select a language</option></select>
+      </div>
 
-    <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'Flashcard')" id="defaultOpen">Flashcard</button>
-      <button class="tablinks" onclick="openTab(event, 'Quiz')">Quiz</button>
-      <button class="tablinks" onclick="openTab(event, 'Facts')">Facts</button>
-    </div>
+      <!-- <div class="wrap"> -->
 
-    <div id="Flashcard" class="tabcontent">
-      <h3>Flashcard</h3>
-      <p><center>Flashcard will go here.</center></p>
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Flashcard')" id="defaultOpen">Flashcard</button>
+        <button class="tablinks" onclick="openTab(event, 'Quiz')">Quiz</button>
+        <button class="tablinks" onclick="openTab(event, 'Facts')">Facts</button>
+      </div>
 
-      <center>
-      <button class="button button1">Previous</button>
-      <button class="button button2">Next</button>
-      </center>
+      <div id="Flashcard" class="tabcontent">
+      <section id="phrases"></section>
+        <center>
+        <button class="button button1">Previous</button>
+        <button class="button button1">Next</button>
+        </center>
+      </div>
 
-    </div>
+      <div id="Quiz" class="tabcontent">
+        <h3>Quiz</h3>
+        <p><center>Quiz will go here.</center></p>
+      </div>
 
-    <div id="Quiz" class="tabcontent">
-      <h3>Quiz</h3>
-      <p><center>Quiz will go here.</center></p>
-    </div>
+      <div id="Facts" class="tabcontent">
+        <h3>Facts</h3>
+        <p><center>Facts and map will go here.</center></p>
+      </div>
 
-    <div id="Facts" class="tabcontent">
-      <h3>Facts</h3>
-      <p><center>Facts and map will go here.</center></p>
-    </div>
+    <!-- </div> -->
 
-  </body>
-</main>
+      <footer>Copyright © 2018 BBC.</footer> 
+
+    </body>
+  </main>
 </html>

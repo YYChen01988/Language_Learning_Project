@@ -12,7 +12,7 @@ FlashcardSelectView.prototype.bindEvents = function() {
 
   this.element.addEventListener('change', (event) => {
     const selectedLanguage = event.target.value;
-    PubSub.publish("FlashcardSelectView:language-name-selected", selectedLanguage);
+    PubSub.publish("SelectView:change", selectedLanguage);
   });
 }
 
