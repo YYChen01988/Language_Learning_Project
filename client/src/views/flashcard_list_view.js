@@ -18,12 +18,12 @@ FlashcardListView.prototype.clearList = function() {
   this.container.innerHTML = '';
 }
 
-// Render - call render method in flashcard_view.js 
+// Render - call render method in flashcard_view.js
 FlashcardListView.prototype.render = function(flashcards) {
   flashcards.forEach((phrase) => {
     const flashcardView = new FlashcardView(this.container, phrase);
     flashcardView.render();
-    // console.log(phrase);
+    // console.log(this.container);
   })
 }
 
