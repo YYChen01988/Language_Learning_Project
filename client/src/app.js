@@ -6,7 +6,7 @@ const MapWrapper = require('./views/map_wrapper.js');
 const AddWordFormView = require('./views/add_word_form_view.js');
 const QuizListView = require('./views/quiz_list_view.js');
 const Quiz = require('./models/quiz.js');
-
+const MapCountryFacts = require('./views/map_country_facts.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -34,7 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const mainMap = document.querySelector('#map-container');
   const mapWrapper = new MapWrapper(mainMap);
-  // mapWrapper.bindEvents();
+  mapWrapper.bindEvents();
+
+  const countryFacts = document.querySelector('#map-country-facts');
+  const mapCountryFacts = new MapCountryFacts(countryFacts);
+  mapCountryFacts.bindEvents();
+
 
   const addWordForm = document.querySelector("#item-form")
   const addWordFormView = new AddWordFormView(addWordForm);
