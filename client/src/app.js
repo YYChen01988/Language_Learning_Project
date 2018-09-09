@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const quizUrl = 'http://localhost:3000/api/quiz';
   const quiz = new Quiz(quizUrl);
   quiz.getQuizData();
-  // flashcard.bindEvents();
 
   const selectElement = document.querySelector('select#chosen-language');
   const selectView = new FlashcardSelectView(selectElement);
