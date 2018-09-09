@@ -5,7 +5,7 @@ const MapWrapper = function(container){
   this.coords = [55.8654192, -4.258020999999999];
   this.map = L.map(this.container);
   this.osmLayer = new L.TileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
-  this.map.setView(this.coords, 8).addLayer(this.osmLayer);
+  this.map.setView(this.coords, 1).addLayer(this.osmLayer);
   this.markers = []
 }
 

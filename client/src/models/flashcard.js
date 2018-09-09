@@ -17,21 +17,6 @@ Flashcard.prototype.languageIncludes = function(languageName, languagesList) {
   return false;
 }
 
-Flashcard.prototype.bindEvents = function(){
-  PubSub.subscribe("SelectView:language_name-selected", (event) => {
-    var language_name = event.detail;
-    var selected_country = [];
-    this.countries.forEach((country) => {
-
-      if(this.languageIncludes(language_name, country.languages)) {
-        selected_country.push(country);
-      }
-    });
-    // console.log(selected_country)
-    PubSub.publish("LanguageList:country-ready", selected_country)
-  })
-}
-
 Flashcard.prototype.getCountryLocations = function(selectedLanguage){
   const request = new Request("https://restcountries.eu/rest/v2/all");
   request.get()
