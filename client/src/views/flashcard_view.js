@@ -18,6 +18,8 @@ FlashcardView.prototype.render = function (flashcard) {
   phraseContainer.appendChild(english);
 
   const audioButton = document.createElement('button');
+  buttonTitle = document.createTextNode("Click for pronounciation");
+  audioButton.appendChild(buttonTitle);
   const audio = this.createAudioElement();
   audioButton.appendChild(audio);
   phraseContainer.appendChild(audioButton);
