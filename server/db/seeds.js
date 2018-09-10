@@ -10,7 +10,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/bedankt.mp3",
       }
     },
     {
@@ -21,7 +21,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/hongerig.ogg.mp3",
       }
     },
     {
@@ -32,7 +32,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/zwemmen.ogg.mp3",
       }
     },
     {
@@ -43,7 +43,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/alsjeblieft.mp3",
       }
     },
     {
@@ -54,7 +54,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/bier.mp3",
       }
     },
     {
@@ -65,7 +65,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/wijn.ogg.mp3",
       }
     },
     {
@@ -76,7 +76,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/fietsen.ogg.mp3",
       }
     },
     {
@@ -87,7 +87,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/goedendag.mp3",
       }
     },
     {
@@ -98,7 +98,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/tot_ziens.mp3",
       }
     },
     {
@@ -109,7 +109,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/01.mp3",
+        Dutch:"audio/dutch/leren.ogg.mp3",
       }
     }
   ]);
