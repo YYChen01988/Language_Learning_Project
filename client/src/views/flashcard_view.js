@@ -28,7 +28,6 @@ FlashcardView.prototype.render = function (flashcard) {
   audio.play(event);
   })
 
-
   this.phrasesContainer.appendChild(phraseContainer);
 };
 
