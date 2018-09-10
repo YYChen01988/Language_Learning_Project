@@ -6,7 +6,10 @@ db.words.insertMany([
     English: "Thank you",
     translation: {Chinese: "你好",
                   German: "Danke",
-                  Dutch: "Bedankt"}
+                  Dutch: "Bedankt"}             
+    audio:{
+      GermanAudio:"audio/01.mp3"
+    }
   },
   {
     English: "Hungry",
