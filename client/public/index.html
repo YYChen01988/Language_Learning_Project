@@ -37,12 +37,11 @@
      </div>
 
      <div id="Flashcard" class="tabcontent">
+     <center>
      <section id="phrases"></section>
-       <center>
        <button id="prevButton" class="button button1">Previous</button>
        <button id="nextButton" class="button button1">Next</button>
-
-       </center>
+     </center>
      </div>
 
      <div id="Quiz" class="tabcontent">
@@ -60,6 +59,7 @@
       <div id="Admin" class="tabcontent">
         <h3>Add a new phrase</h2>
           <form id="item-form">
+            <div class="box">
             <div class="row">
               <div class="col-30">
                 <label for="english">English phrase:</label>
@@ -110,7 +110,8 @@
                 <input type="text" id="dutchaudio" required/>
               </div>
             </div>
-            <input type="submit" value="Save" id="submit" onClick="window.location.reload()"/>
+            <input type="submit" value="Save" id="submit" onClick="window.location.reload()"/><br><br>
+          </div>
           </div>
         </form>
       </div>

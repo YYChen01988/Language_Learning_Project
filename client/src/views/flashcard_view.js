@@ -17,14 +17,24 @@ FlashcardView.prototype.render = function (flashcard) {
   const english = this.createEnglishPhrase();
   phraseContainer.appendChild(english);
 
-  const audioButton = document.createElement('AUDIO');
-  audioButton.setAttribute("controls", "controls");
-  // buttonTitle = document.createTextNode("Click for pronounciation");
-  // audioButton.appendChild(buttonTitle);
+  // const audioButton = document.createElement('AUDIO');
+  // audioButton.setAttribute("controls", "controls");
+  // // buttonTitle = document.createTextNode("Click for pronounciation");
+  // // audioButton.appendChild(buttonTitle);
+  // const audio = this.createAudioElement();
+  // audioButton.appendChild(audio);
+  // phraseContainer.appendChild(audioButton);
+  // audioButton.addEventListener('click', (event) => {
+  // audio.play(event);
+
+  const buttonContainer = document.createElement('div');
+  const audioButton = document.createElement('button');
+  audioButton.classList.add('audiobutton')
+  audioButton.innerHTML = '<img src="images/play.png" width="206px" height="50px"/>';
+
   const audio = this.createAudioElement();
   audioButton.appendChild(audio);
   phraseContainer.appendChild(audioButton);
-  // audio.play();
   audioButton.addEventListener('click', (event) => {
   audio.play(event);
   })
