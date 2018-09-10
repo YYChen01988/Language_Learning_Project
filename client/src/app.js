@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapCountryFacts = new MapCountryFacts(countryFacts);
   mapCountryFacts.bindEvents();
 
-
   const addWordForm = document.querySelector("#item-form")
   const addWordFormView = new AddWordFormView(addWordForm);
   addWordFormView.bindEvents();
