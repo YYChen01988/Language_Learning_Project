@@ -17,11 +17,14 @@ FlashcardView.prototype.render = function (flashcard) {
   const english = this.createEnglishPhrase();
   phraseContainer.appendChild(english);
 
-  const audioButton = document.createElement('audio');
+  const audioButton = document.createElement('button');
   const audio = this.createAudioElement();
   audioButton.appendChild(audio);
   phraseContainer.appendChild(audioButton);
   // audio.play();
+  audioButton.addEventListener('click', (event) => {
+  audio.play(event);
+  })
 
   this.phrasesContainer.appendChild(phraseContainer);
 };
