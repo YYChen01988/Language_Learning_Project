@@ -17,6 +17,9 @@ FlashcardView.prototype.render = function (flashcard) {
   const english = this.createEnglishPhrase();
   phraseContainer.appendChild(english);
 
+  const audio = this.createAudioElement();
+  phraseContainer.appendChild(audio);
+
   this.phrasesContainer.appendChild(phraseContainer);
 };
 
@@ -32,4 +35,10 @@ FlashcardView.prototype.createEnglishPhrase = function() {
   return english;
 }
 
+FlashcardView.prototype.createAudioElement = function() {
+  const audio = document.createElement('audio');
+  audio.src = this.phrase[2];
+  return audio;
+}
+ 
 module.exports = FlashcardView;
