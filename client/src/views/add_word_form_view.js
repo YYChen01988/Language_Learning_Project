@@ -27,6 +27,11 @@ AddWordFormView.prototype.createsWord = function(form){
       Chinese: form.chinese.value,
       German: form.german.value,
       Dutch: form.dutch.value
+    },
+    audio: {
+      Chinese: form.chineseaudio.value,
+      German: form.germanaudio.value,
+      Dutch: form.dutchaudio.value
     }
   };
   return newWord;
