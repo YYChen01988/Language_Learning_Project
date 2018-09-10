@@ -7,16 +7,6 @@ const Flashcard = function(url) {
   this.languages = [];
 };
 
-// Map
-Flashcard.prototype.languageIncludes = function(languageName, languagesList) {
-  for (var i = 0; i< languagesList.length; i++ ) {
-    if(languagesList[i].name == languageName) {
-      return true
-    };
-  }
-  return false;
-}
-
 Flashcard.prototype.getCountryLocations = function(selectedLanguage){
   const request = new Request("https://restcountries.eu/rest/v2/all");
   request.get()
@@ -69,7 +59,7 @@ Flashcard.prototype.postWord = function(word){
   this.request.post(word)
   .then((languages) => {
     PubSub.publish('Languages:languages-data-ready', languages);
-    // console.log("languages is:", languages);
+    console.log("languages is:", languages);
   })
   .catch(console.error);
 };
