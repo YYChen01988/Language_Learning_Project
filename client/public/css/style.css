@@ -29,6 +29,7 @@ h2 {
   text-align: center;
   font-style: italic;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 h3 {
@@ -79,6 +80,10 @@ a {
 
 #chosen-language :hover {
   background-color: grey;
+}
+
+#chosen-language:focus {
+  outline:0;
 }
 
 /* NEXT/PREVIOUS BUTTONS IN FLASHCARD TAB */

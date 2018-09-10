@@ -9,7 +9,7 @@ db.words.insertMany([
                     Dutch: "Bedankt"},
       audio:{
         Chinese:"audio/chinese/thank_you_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/ineedajobby.m4a",
         Dutch:"audio/dutch/bedankt.ogg.mp3",
       }
     },
@@ -20,7 +20,7 @@ db.words.insertMany([
                     Dutch: "Hongerig"},
       audio:{
         Chinese:"audio/chinese/hungry_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/hungry.m4a",
         Dutch:"audio/dutch/hongerig.ogg.mp3",
       }
     },
@@ -31,7 +31,7 @@ db.words.insertMany([
                     Dutch: "Zwemmen"},
       audio:{
         Chinese:"audio/chinese/swim_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/swimming.m4a",
         Dutch:"audio/dutch/zwemmen.ogg.mp3",
       }
     },
@@ -42,7 +42,7 @@ db.words.insertMany([
                     Dutch: "Alsjeblieft"},
       audio:{
         Chinese:"audio/chinese/please_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/please.m4a",
         Dutch:"audio/dutch/alsjeblieft.ogg.mp3",
       }
     },
@@ -53,7 +53,7 @@ db.words.insertMany([
                     Dutch: "Bier"},
       audio:{
         Chinese:"audio/chinese/beer_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/beer.m4a",
         Dutch:"audio/dutch/bier.ogg.mp3",
       }
     },
@@ -64,7 +64,7 @@ db.words.insertMany([
                     Dutch: "Wijn"},
       audio:{
         Chinese:"audio/chinese/wine_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/wine.m4a",
         Dutch:"audio/dutch/wijn.ogg.mp3",
       }
     },
@@ -75,7 +75,7 @@ db.words.insertMany([
                     Dutch: "Fietsen"},
       audio:{
         Chinese:"audio/chinese/cycling_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/cycling.m4a",
         Dutch:"audio/dutch/fietsen.ogg.mp3",
       }
     },
@@ -86,7 +86,7 @@ db.words.insertMany([
                     Dutch: "Goedendag"},
       audio:{
         Chinese:"audio/chinese/good_day_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/goodday.m4a",
         Dutch:"audio/dutch/goedendag.ogg.mp3",
       }
     },
@@ -97,7 +97,7 @@ db.words.insertMany([
                     Dutch: "Tot ziens"},
       audio:{
         Chinese:"audio/chinese/goodbye_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/goodbye.m4a",
         Dutch:"audio/dutch/tot_ziens.ogg.mp3",
       }
     },
@@ -108,7 +108,7 @@ db.words.insertMany([
                     Dutch: "Leren"},
       audio:{
         Chinese:"audio/chinese/learning_c.m4a",
-        German:"audio/01.mp3",
+        German:"audio/german/learning.m4a",
         Dutch:"audio/dutch/leren.ogg.mp3",
       }
     }
