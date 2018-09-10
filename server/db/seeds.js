@@ -6,7 +6,7 @@ db.words.insertMany([
     English: "Thank you",
     translation: {Chinese: "你好",
                   German: "Danke",
-                  Dutch: "Dank je"},
+                  Dutch: "Bedankt"}             
     audio:{
       GermanAudio:"audio/01.mp3"
     }
@@ -51,13 +51,13 @@ db.words.insertMany([
     English: "Good day",
     translation: {Chinese: "美好的一天",
                   German: "Schönen Tag",
-                  Dutch: "Goede dag"}
+                  Dutch: "Goedendag"}
   },
   {
     English: "Goodbye",
     translation: {Chinese: "再見",
                   German: "Auf Wiedersehen",
-                  Dutch: "Vaarwel"}
+                  Dutch: "Tot ziens"}
   },
   {
     English: "Learning",
