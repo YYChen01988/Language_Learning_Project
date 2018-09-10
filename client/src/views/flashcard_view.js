@@ -36,9 +36,9 @@ FlashcardView.prototype.createEnglishPhrase = function() {
 }
 
 FlashcardView.prototype.createAudioElement = function() {
-  const audio = document.createElement('audio');
-  audio.src = this.phrase[2];
+  const audio = document.createElement('h3');
+  audio.textContent = this.phrase[2];
   return audio;
 }
- 
+
 module.exports = FlashcardView;

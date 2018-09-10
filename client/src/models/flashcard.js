@@ -43,9 +43,16 @@ Flashcard.prototype.publishByLanguage = function(languages){
 
   PubSub.subscribe("SelectView:change", (event) => {
     const selectedLanguageWords =[];
-    languages.forEach((language) => {
+    this.languages.forEach((language) => {
       if (language.translation.hasOwnProperty(event.detail)){
-        selectedLanguageWords.push([language.translation[event.detail], language.English]);
+        console.log(this.languages);
+
+        console.log('language.audio', language.audio);
+        console.log('event detail',event.detail);
+        const audio = language.audio[event.detail];
+        console.log("Audio",audio);
+        selectedLanguageWords.push([language.translation[event.detail], language.English, language.audio[event.detail]]);
+        console.log(selectedLanguageWords);
       };
     });
     PubSub.publish("Flashcard:selected-language-and-answer", selectedLanguageWords);
@@ -59,7 +66,7 @@ Flashcard.prototype.postWord = function(word){
   this.request.post(word)
   .then((languages) => {
     PubSub.publish('Languages:languages-data-ready', languages);
-    console.log("languages is:", languages);
+    // console.log("languages is:", languages);
   })
   .catch(console.error);
 };

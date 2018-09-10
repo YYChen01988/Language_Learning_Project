@@ -19,7 +19,7 @@ Quiz.prototype.getQuizData = function(){
 // WE NEED TO RETURN THE LANGUAGE OBJECT(?) THAT MATCHES LANGUAGE SELECTED IN THE DROPDOWN
 Quiz.prototype.publishQuizByLanguage = function(quiz){
   this.quiz = quiz;
-  console.log(quiz);
+  // console.log(quiz);
   // PubSub.subscribe("SelectView:change", (event) => {
   //   });
   //   PubSub.publish("Quiz:selected-data-ready", selectedLanguageQuiz);
