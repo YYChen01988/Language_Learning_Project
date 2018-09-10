@@ -17,9 +17,10 @@ FlashcardView.prototype.render = function (flashcard) {
   const english = this.createEnglishPhrase();
   phraseContainer.appendChild(english);
 
-  const audioButton = document.createElement('button');
-  buttonTitle = document.createTextNode("Click for pronounciation");
-  audioButton.appendChild(buttonTitle);
+  const audioButton = document.createElement('AUDIO');
+  audioButton.setAttribute("controls", "controls");
+  // buttonTitle = document.createTextNode("Click for pronounciation");
+  // audioButton.appendChild(buttonTitle);
   const audio = this.createAudioElement();
   audioButton.appendChild(audio);
   phraseContainer.appendChild(audioButton);
