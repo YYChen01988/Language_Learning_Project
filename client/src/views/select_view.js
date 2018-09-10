@@ -7,6 +7,7 @@ const FlashcardSelectView = function(selectElement) {
 
 FlashcardSelectView.prototype.bindEvents = function() {
   PubSub.subscribe('Languages:languages-data-ready', (event) => {
+    this.element.innerHTML = '';
     this.populate(event.detail);
   });
 
@@ -22,7 +23,7 @@ FlashcardSelectView.prototype.populate = function(languages) {
    languageOptions = languageOptions.concat(Object.keys(language.translation));
  })
  languageOptions = new Set([...languageOptions]);
- // console.log(languageOptions);
+ console.log("Language Options", languageOptions);
  languageOptions.forEach((element, index) => {
    const languageElement = this.createOption(element, index);
    this.element.appendChild(languageElement);

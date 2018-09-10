@@ -48,6 +48,9 @@
       <section id="quiz"></section>
        <h3>Quiz</h3>
        <p><center>Quiz will go here.</center></p>
+       <audio controls>
+        <source src="audio/01.mp3" type="audio/mpeg">
+      </audio>
      </div>
 
      <div id="Facts" class="tabcontent">
@@ -72,7 +75,7 @@
                 <label for="chinese">Chinese translation:</label>
               </div>
               <div class="col-70">
-                <input type="text" id="chinese"/>
+                <input type="text" id="chinese" required/>
               </div>
             </div>
             <div class="row">
@@ -80,7 +83,7 @@
                 <label for="german">German translation:</label>
               </div>
               <div class="col-70">
-                <input type="text" id="german"/>
+                <input type="text" id="german" required/>
               </div>
             </div>
             <div class="row">
@@ -88,7 +91,7 @@
                 <label for="dutch">Dutch translation:</label>
               </div>
               <div class="col-70">
-                <input type="text" id="dutch"/>
+                <input type="text" id="dutch" required/>
               </div>
             </div>
             <input type="submit" value="Save" id="submit"/>
