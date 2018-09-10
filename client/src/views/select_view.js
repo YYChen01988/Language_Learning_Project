@@ -8,6 +8,10 @@ const FlashcardSelectView = function(selectElement) {
 FlashcardSelectView.prototype.bindEvents = function() {
   PubSub.subscribe('Languages:languages-data-ready', (event) => {
     this.element.innerHTML = '';
+    const defaultOption = document.createElement('option');
+    defaultOption.selected = 'selected';
+    defaultOption.textContent = "Select a language";
+    this.element.appendChild(defaultOption);
     this.populate(event.detail);
   });
 
