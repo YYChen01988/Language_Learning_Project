@@ -10,7 +10,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/dutch/bedankt.mp3",
+        Dutch:"audio/dutch/bedankt.ogg.mp3",
       }
     },
     {
@@ -43,7 +43,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/dutch/alsjeblieft.mp3",
+        Dutch:"audio/dutch/alsjeblieft.ogg.mp3",
       }
     },
     {
@@ -54,7 +54,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/dutch/bier.mp3",
+        Dutch:"audio/dutch/bier.ogg.mp3",
       }
     },
     {
@@ -87,7 +87,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/dutch/goedendag.mp3",
+        Dutch:"audio/dutch/goedendag.ogg.mp3",
       }
     },
     {
@@ -98,7 +98,7 @@ db.words.insertMany([
       audio:{
         Chinese:"audio/01.mp3",
         German:"audio/01.mp3",
-        Dutch:"audio/dutch/tot_ziens.mp3",
+        Dutch:"audio/dutch/tot_ziens.ogg.mp3",
       }
     },
     {
