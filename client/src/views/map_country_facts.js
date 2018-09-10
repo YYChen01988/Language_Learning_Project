@@ -10,9 +10,21 @@ MapCountryFacts.prototype.bindEvents = function(){
     const countries = event.detail;
     this.container.innerHTML = "";
     countries.forEach((country) => {
-      const p = document.createElement('p');
-      p.textContent = country.name;
-      this.container.appendChild(p);
+      const header = document.createElement('strong');
+      header.textContent = country.nativeName;
+      this.container.appendChild(header);
+
+      const nativeName = document.createElement('p');
+      nativeName.textContent = country.name;
+      this.container.appendChild(nativeName);
+
+
+      const population = document.createElement('p');
+      population.textContent = "Population:" + country.population;
+      this.container.appendChild(population);
+
+
+
     });
   });
 };
