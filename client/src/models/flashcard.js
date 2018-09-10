@@ -45,14 +45,13 @@ Flashcard.prototype.publishByLanguage = function(languages){
     const selectedLanguageWords =[];
     this.languages.forEach((language) => {
       if (language.translation.hasOwnProperty(event.detail)){
-        console.log(this.languages);
-
-        console.log('language.audio', language.audio);
-        console.log('event detail',event.detail);
+        // console.log(this.languages);
+        // console.log('language.audio', language.audio);
+        // console.log('event detail',event.detail);
         const audio = language.audio[event.detail];
-        console.log("Audio",audio);
+        // console.log("Audio",audio);
         selectedLanguageWords.push([language.translation[event.detail], language.English, language.audio[event.detail]]);
-        console.log(selectedLanguageWords);
+        // console.log(selectedLanguageWords);
       };
     });
     PubSub.publish("Flashcard:selected-language-and-answer", selectedLanguageWords);
