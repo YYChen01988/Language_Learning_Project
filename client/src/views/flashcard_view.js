@@ -17,8 +17,11 @@ FlashcardView.prototype.render = function (flashcard) {
   const english = this.createEnglishPhrase();
   phraseContainer.appendChild(english);
 
+  const audioButton = document.createElement('audio');
   const audio = this.createAudioElement();
-  phraseContainer.appendChild(audio);
+  audioButton.appendChild(audio);
+  phraseContainer.appendChild(audioButton);
+  // audio.play();
 
   this.phrasesContainer.appendChild(phraseContainer);
 };
@@ -36,8 +39,8 @@ FlashcardView.prototype.createEnglishPhrase = function() {
 }
 
 FlashcardView.prototype.createAudioElement = function() {
-  const audio = document.createElement('h3');
-  audio.textContent = this.phrase[2];
+  const audio = document.createElement('audio');
+  audio.src = this.phrase[2];
   return audio;
 }
 
