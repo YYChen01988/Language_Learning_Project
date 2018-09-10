@@ -18,6 +18,7 @@ FlashcardView.prototype.render = function (flashcard) {
   phraseContainer.appendChild(english);
 
   const audioButton = document.createElement('button');
+<<<<<<< Updated upstream
   buttonTitle = document.createTextNode("Click for pronounciation");
   audioButton.appendChild(buttonTitle);
   const audio = this.createAudioElement();
@@ -27,6 +28,12 @@ FlashcardView.prototype.render = function (flashcard) {
   audioButton.addEventListener('click', (event) => {
   audio.play(event);
   })
+=======
+  const audio = this.createAudioElement();
+  audioButton.appendChild(audio);
+  phraseContainer.appendChild(audioButton);
+  audio.play();
+>>>>>>> Stashed changes
 
   this.phrasesContainer.appendChild(phraseContainer);
 };
