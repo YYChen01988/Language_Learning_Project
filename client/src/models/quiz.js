@@ -37,10 +37,12 @@ Quiz.prototype.publishQuizByLanguage = function(quiz){
   // write checkAnswer method here
   Quiz.prototype.checkAnswer = function(textBoxValue, english){
     if (textBoxValue === english){
-      console.log("correct");
+      const correctAnswer = true;
+      // console.log(correctAnswer);
+      PubSub.publish("Quiz:correct-answer", correctAnswer);
     } else {
-      console.log("false! :(");
-    }
-  }
+      console.log("false");
+    };
+  };
 
 module.exports = Quiz;

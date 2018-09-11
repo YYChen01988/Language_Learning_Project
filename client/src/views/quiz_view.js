@@ -36,4 +36,14 @@ QuizView.prototype.createForeignPhrase = function() {
   return foreign;
 };
 
+QuizView.prototype.correctAnswer = function(){
+  PubSub.subscribe("Quiz:correct-answer", (event) => {
+    // const correctAnswer = document.createElement('h1');
+    // correctAnswer.textContent = "Yes";
+    console.log(event.detail);
+    // return correctAnswer;
+  })
+};
+
+
 module.exports = QuizView;
