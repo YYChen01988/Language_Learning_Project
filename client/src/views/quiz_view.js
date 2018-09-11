@@ -36,14 +36,29 @@ QuizView.prototype.createForeignPhrase = function() {
   return foreign;
 };
 
-QuizView.prototype.correctAnswer = function(){
+QuizView.prototype.bindEvents = function(){
   PubSub.subscribe("Quiz:correct-answer", (event) => {
-    // const correctAnswer = document.createElement('h1');
-    // correctAnswer.textContent = "Yes";
-    console.log(event.detail);
+    if (event.detail === true)
+    // console.log(event);
+    var popup = open("", "Popup", "width=300,height=200");
+var txtOk = popup.document.createElement("You are correct");
+aOk.innerHTML = "Click here";
+
+popup.document.body.appendChild(txtOk);
+    // this.check(event.detail);
     // return correctAnswer;
-  })
+  });
 };
+
+// QuizView.prototype.check = function (event) {
+//   const bum = document.createElement('h2');
+//
+//   this.questionsContainer.appendChild(bum);
+//   console.log(bum);
+// }
+
+
+
 
 
 module.exports = QuizView;
