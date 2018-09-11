@@ -7,6 +7,7 @@ const AddWordFormView = require('./views/add_word_form_view.js');
 const QuizListView = require('./views/quiz_list_view.js');
 const Quiz = require('./models/quiz.js');
 const QuizView = require('./views/quiz_view.js');
+const AnswerListView = require('./views/answer_list_view.js')
 
 const MapCountryFacts = require('./views/map_country_facts.js');
 
@@ -21,8 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const quiz = new Quiz(quizUrl);
   quiz.getQuizData();
 
-  const quizView = new QuizView();
-  quizView.bindEvents();
+  // const quizView = new QuizView();
+  // quizView.bindEvents();
+  const selectE = document.querySelector('#answer');
+  const answerListView = new AnswerListView(selectE);
+  answerListView.bindEvents();
 
   const selectElement = document.querySelector('select#chosen-language');
   const selectView = new FlashcardSelectView(selectElement);
