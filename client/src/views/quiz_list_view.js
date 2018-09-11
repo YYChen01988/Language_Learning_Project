@@ -19,9 +19,9 @@ QuizListView.prototype.clearList = function() {
 
 QuizListView.prototype.render = function(quizQuestionPairs) {
   quizQuestionPairs.forEach((question) => {
-    console.log(question);
+    // console.log(question);
     const quizView = new QuizView(this.container, question);
-    // quizView.render();
+    quizView.render();
     // console.log();
   })
 }
