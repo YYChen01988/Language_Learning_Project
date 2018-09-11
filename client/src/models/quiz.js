@@ -34,4 +34,9 @@ Quiz.prototype.publishQuizByLanguage = function(quiz){
     });
   };
 
+  // write checkAnswer method here
+  Quiz.prototype.checkAnswer = function(textBoxValue){
+    console.log(textBoxValue);
+  }
+
 module.exports = Quiz;
