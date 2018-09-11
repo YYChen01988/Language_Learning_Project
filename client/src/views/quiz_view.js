@@ -41,10 +41,9 @@ QuizView.prototype.bindEvents = function(){
     if (event.detail === true)
     // console.log(event);
     var popup = open("", "Popup", "width=300,height=200");
-var txtOk = popup.document.createElement("You are correct");
-aOk.innerHTML = "Click here";
-
-popup.document.body.appendChild(txtOk);
+    var txtOk = popup.document.createElement("h1");
+    txtOk.textContent = "You are correct!!"
+    popup.document.body.appendChild(txtOk);
     // this.check(event.detail);
     // return correctAnswer;
   });
