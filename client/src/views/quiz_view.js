@@ -25,11 +25,7 @@ QuizView.prototype.render = function (flashcard) {
     // need to take data from text box which is check answer parameter
     quiz.checkAnswer(textBox.value, this.question[0]);
     // this.createAnswer();   //answer bit
-  })
-
-  // use this for answer but move it?
-  // const answer = this.createAnswer();
-  // questionContainer.appendChild(answer);
+  });
 
   this.questionsContainer.appendChild(questionContainer);
 };
