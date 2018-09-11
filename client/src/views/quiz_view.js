@@ -38,24 +38,20 @@ QuizView.prototype.createForeignPhrase = function() {
 
 QuizView.prototype.bindEvents = function(){
   PubSub.subscribe("Quiz:correct-answer", (event) => {
-    if (event.detail === true)
-    // console.log(event);
+    if (event.detail === true){
     var popup = open("", "Popup", "width=300,height=200");
-    var txtOk = popup.document.createElement("h1");
-    txtOk.textContent = "You are correct!!"
-    popup.document.body.appendChild(txtOk);
-    // this.check(event.detail);
-    // return correctAnswer;
+    var rightResponse = popup.document.createElement("h1");
+    rightResponse.textContent = "You are correct!!"
+    popup.document.body.appendChild(rightResponse);
+  }else{
+    var popup = open("", "Popup", "width=300,height=200");
+    var wrongResponse = popup.document.createElement("h1");
+    wrongResponse.textContent = "Try Again!"
+    popup.document.body.appendChild(wrongResponse);
+  }
+
   });
 };
-
-// QuizView.prototype.check = function (event) {
-//   const bum = document.createElement('h2');
-//
-//   this.questionsContainer.appendChild(bum);
-//   console.log(bum);
-// }
-
 
 
 
