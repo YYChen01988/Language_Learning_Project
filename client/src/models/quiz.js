@@ -35,8 +35,12 @@ Quiz.prototype.publishQuizByLanguage = function(quiz){
   };
 
   // write checkAnswer method here
-  Quiz.prototype.checkAnswer = function(textBoxValue){
-    console.log(textBoxValue);
+  Quiz.prototype.checkAnswer = function(textBoxValue, english){
+    if (textBoxValue === english){
+      console.log("correct");
+    } else {
+      console.log("false! :(");
+    }
   }
 
 module.exports = Quiz;
