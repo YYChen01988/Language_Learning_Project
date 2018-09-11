@@ -99,15 +99,33 @@ p {
   margin: auto;
 }
 
-.audiobutton:focus {
-  outline:0;
-}
-
 .flashcard {
   margin-top: 90px;
   height: 200px;
   width: 400px;
   border-radius: 25px;
+}
+
+.quizContainer {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.checkButton {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-left: 30px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 .button {
@@ -127,7 +145,7 @@ p {
   border-radius: 6px;
 }
 
-.button:focus {
+.button:focus,.audiobutton:focus,.checkButton:focus {
   outline:0;
 }
 

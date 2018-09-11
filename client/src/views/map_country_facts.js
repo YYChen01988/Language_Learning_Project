@@ -4,7 +4,6 @@ const MapCountryFacts = function(container){
   this.container = container;
 }
 
-
 MapCountryFacts.prototype.bindEvents = function(){
   PubSub.subscribe("Map:countries-objects-ready", (event) => {
     const countries = event.detail;
@@ -18,13 +17,9 @@ MapCountryFacts.prototype.bindEvents = function(){
       nativeName.textContent = country.name;
       this.container.appendChild(nativeName);
 
-
       const population = document.createElement('p');
       population.textContent = "Population:" + country.population;
       this.container.appendChild(population);
-
-
-
     });
   });
 };

@@ -21,7 +21,6 @@ Flashcard.prototype.getCountryLocations = function(selectedLanguage){
   });
 };
 
-// Flashcard
 Flashcard.prototype.bindEvents = function(){
   PubSub.subscribe('AddWordFormView:item-submitted', (event) => {
     this.postWord(event.detail);
@@ -45,27 +44,18 @@ Flashcard.prototype.publishByLanguage = function(languages){
     const selectedLanguageWords =[];
     this.languages.forEach((language) => {
       if (language.translation.hasOwnProperty(event.detail)){
-        // console.log(this.languages);
-        // console.log('language.audio', language.audio);
-        // console.log('event detail',event.detail);
-        // const audio = language.audio[event.detail];
-        // console.log("Audio",audio);
         selectedLanguageWords.push([language.translation[event.detail], language.English, language.audio[event.detail]]);
-        // console.log(selectedLanguageWords);
       };
     });
     PubSub.publish("Flashcard:selected-language-and-answer", selectedLanguageWords);
     this.getCountryLocations(event.detail);
-    // console.log(selectedLanguageWords);
   });
 };
 
 Flashcard.prototype.postWord = function(word){
-  // console.log('what is the word:', word);
   this.request.post(word)
   .then((languages) => {
     PubSub.publish('Languages:languages-data-ready', languages);
-    // console.log("languages is:", languages);
   })
   .catch(console.error);
 };
