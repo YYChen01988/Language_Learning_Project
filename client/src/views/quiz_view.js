@@ -23,8 +23,7 @@ QuizView.prototype.render = function (flashcard) {
   checkAnswerButton.addEventListener('click', (event) => {
     const quiz = new Quiz();
     // need to take data from text box which is check answer parameter
-    quiz.checkAnswer(textBox.value);
-    // console.log(textBox.value);
+    quiz.checkAnswer(textBox.value, this.question[0]);
     // console.log(foreign.value);
   })
 
