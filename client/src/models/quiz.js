@@ -10,7 +10,6 @@ Quiz.prototype.getQuizData = function(){
   this.request.get()
   .then((quiz) => {
     // PubSub.publish('Quiz:quiz-data-ready', quiz);
-    // console.log(quiz);
     this.publishQuizByLanguage(quiz);
   })
   .catch(console.error);
@@ -19,26 +18,19 @@ Quiz.prototype.getQuizData = function(){
 // WE NEED TO RETURN THE LANGUAGE OBJECT(?) THAT MATCHES LANGUAGE SELECTED IN THE DROPDOWN
 Quiz.prototype.publishQuizByLanguage = function(quiz){
   this.quiz = quiz;
-  // console.log(quiz);
   PubSub.subscribe("SelectView:change", (event) => {
     const selectedQuizWords = [];
     this.quiz.forEach((question) => {
       selectedQuizWords.push([question.English, question[event.detail]])
-      // console.log("english", question.English);
-      // console.log(selectedQuizWords);
-      // console.log("language", question[event.detail]);
-      // console.log(event);
       })
       PubSub.publish("Quiz:selected-data-ready", selectedQuizWords);
-      // console.log(selectedQuizWords);
     });
   };
 
-  // write checkAnswer method here
+  // write checkAnswer method here --> use this but move it?
   Quiz.prototype.checkAnswer = function(textBoxValue, english){
     if (textBoxValue === english){
       var answer = true;
-      // console.log(correctAnswer);
     } else {
       var answer = false;
     };

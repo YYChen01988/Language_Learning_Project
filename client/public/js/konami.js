@@ -40,8 +40,8 @@ document.addEventListener('keydown', function(e) {
 function activateCheats() {
   document.body.style.backgroundImage = "url('images/sparkle_gif.gif')";
 
-  // var audio = new Audio('audio/...');
-  // audio.play();
+  var audio = new Audio('audio/trumpet.wav');
+  audio.play();
 
   alert("Congratulations!");
 }
