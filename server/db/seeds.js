@@ -113,7 +113,7 @@ db.words.insertMany([
       }
     }
   ]);
-db.words.insertMany([
+db.quiz.insertMany([
   {
     English: "friend",
     Chinese: "朋友",
