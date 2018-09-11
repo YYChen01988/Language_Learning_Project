@@ -24,8 +24,12 @@ QuizView.prototype.render = function (flashcard) {
     const quiz = new Quiz();
     // need to take data from text box which is check answer parameter
     quiz.checkAnswer(textBox.value, this.question[0]);
-    // console.log(foreign.value);
+    // this.createAnswer();   //answer bit
   })
+
+  // use this for answer but move it?
+  // const answer = this.createAnswer();
+  // questionContainer.appendChild(answer);
 
   this.questionsContainer.appendChild(questionContainer);
 };
@@ -36,13 +40,20 @@ QuizView.prototype.createForeignPhrase = function() {
   return foreign;
 };
 
+// use for answer
+QuizView.prototype.createAnswer = function(){
+  const answer = document.createElement('p');
+  answer.textContent = this.correctAnswer();
+  // console.log(answer.textContent);
+  return answer;
+};
+
+// use this for answer but move it?
 QuizView.prototype.correctAnswer = function(){
   PubSub.subscribe("Quiz:correct-answer", (event) => {
-    // const correctAnswer = document.createElement('h1');
-    // correctAnswer.textContent = "Yes";
-    console.log(event.detail);
-    // return correctAnswer;
-  })
+  console.log('event.detail in correctAnswer', event.detail);
+  return event.detail;
+  });
 };
 
 
