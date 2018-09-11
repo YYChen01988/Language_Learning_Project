@@ -9,7 +9,7 @@ const Quiz = function(url) {
 Quiz.prototype.getQuizData = function(){
   this.request.get()
   .then((quiz) => {
-    PubSub.publish('Quiz:quiz-data-ready', quiz);
+    // PubSub.publish('Quiz:quiz-data-ready', quiz);
     // console.log(quiz);
     this.publishQuizByLanguage(quiz);
   })
@@ -20,10 +20,18 @@ Quiz.prototype.getQuizData = function(){
 Quiz.prototype.publishQuizByLanguage = function(quiz){
   this.quiz = quiz;
   // console.log(quiz);
-  // PubSub.subscribe("SelectView:change", (event) => {
-  //   });
-  //   PubSub.publish("Quiz:selected-data-ready", selectedLanguageQuiz);
-  // });
-};
+  PubSub.subscribe("SelectView:change", (event) => {
+    const selectedQuizWords = [];
+    this.quiz.forEach((question) => {
+      selectedQuizWords.push([question.English, question[event.detail]])
+      // console.log("english", question.English);
+      // console.log(selectedQuizWords);
+      // console.log("language", question[event.detail]);
+      // console.log(event);
+      })
+      PubSub.publish("Quiz:selected-data-ready", selectedQuizWords);
+      // console.log(selectedQuizWords);
+    });
+  };
 
 module.exports = Quiz;

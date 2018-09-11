@@ -48,7 +48,7 @@ Flashcard.prototype.publishByLanguage = function(languages){
         // console.log(this.languages);
         // console.log('language.audio', language.audio);
         // console.log('event detail',event.detail);
-        const audio = language.audio[event.detail];
+        // const audio = language.audio[event.detail];
         // console.log("Audio",audio);
         selectedLanguageWords.push([language.translation[event.detail], language.English, language.audio[event.detail]]);
         // console.log(selectedLanguageWords);
