@@ -40,21 +40,24 @@ QuizView.prototype.createForeignPhrase = function() {
   return foreign;
 };
 
-// use for answer
-QuizView.prototype.createAnswer = function(){
-  const answer = document.createElement('p');
-  answer.textContent = this.correctAnswer();
-  // console.log(answer.textContent);
-  return answer;
-};
 
-// use this for answer but move it?
-QuizView.prototype.correctAnswer = function(){
+QuizView.prototype.bindEvents = function(){
   PubSub.subscribe("Quiz:correct-answer", (event) => {
-  console.log('event.detail in correctAnswer', event.detail);
-  return event.detail;
+    if (event.detail === true){
+    var popup = open("", "Popup", "width=300,height=200");
+    var rightResponse = popup.document.createElement("h1");
+    rightResponse.textContent = "You are correct!!"
+    popup.document.body.appendChild(rightResponse);
+  }else{
+    var popup = open("", "Popup", "width=300,height=200");
+    var wrongResponse = popup.document.createElement("h1");
+    wrongResponse.textContent = "Try Again!"
+    popup.document.body.appendChild(wrongResponse);
+  }
   });
 };
+
+
 
 
 module.exports = QuizView;

@@ -6,6 +6,8 @@ const MapWrapper = require('./views/map_wrapper.js');
 const AddWordFormView = require('./views/add_word_form_view.js');
 const QuizListView = require('./views/quiz_list_view.js');
 const Quiz = require('./models/quiz.js');
+const QuizView = require('./views/quiz_view.js');
+
 const MapCountryFacts = require('./views/map_country_facts.js');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const quizUrl = 'http://localhost:3000/api/quiz';
   const quiz = new Quiz(quizUrl);
   quiz.getQuizData();
+
+  const quizView = new QuizView();
+  quizView.bindEvents();
 
   const selectElement = document.querySelector('select#chosen-language');
   const selectView = new FlashcardSelectView(selectElement);
