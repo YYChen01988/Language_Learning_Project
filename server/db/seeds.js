@@ -113,34 +113,23 @@ db.words.insertMany([
       }
     }
   ]);
-  db.quiz.insertMany([
-    {"Chinese": [
-    {
-      question: "Hello",
-      answer: "Jobby",
-      possible: {one: "Wee Jobby",
-                two: "Big Jobby",
-                three: "Jobby",
-                four: "Job"}
-    }]},
-    {"German": [
-    {
-      question: "Hello",
-      answer: "Jobby",
-      possible: {one: "Wee Jobby",
-                two: "Big Jobby",
-                three: "Jobby",
-                four: "Job"}
-    }]},
-    {"Dutch": [
-    {
-      question: "Hello",
-      answer: "Jobby",
-      possible: {one: "Wee Jobby",
-                two: "Big Jobby",
-                three: "Jobby",
-                four: "Job"}
-    }]},
-  ]);
-
+db.words.insertMany([
+  {
+    English: "friend",
+    Chinese: "朋友",
+    German: "freund",
+    Dutch: "vriend"
+  },
+  {
+    English: "brother",
+    Chinese: "哥哥",
+    German: "bruder",
+    Dutch: "broer"
+  },
+  {
+    English: "tomato",
+    Chinese: "番茄",
+    German: "tomate",
+    Dutch: "tomaat"
+  }
 ]);
