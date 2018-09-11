@@ -7,11 +7,10 @@ const AddWordFormView = function (form) {
 AddWordFormView.prototype.bindEvents = function () {
   this.form.addEventListener('submit', (event) => {
   this.handleSubmit(event);
-  // console.log(event);
   })
 };
 
-AddWordFormView.prototype.handleSubmit = function (event) {
+AddWordFormView.prototype.handleSubmit = function(event) {
   event.preventDefault();
   const newWord =
   this.createsWord(event.target);
@@ -20,7 +19,6 @@ AddWordFormView.prototype.handleSubmit = function (event) {
 }
 
 AddWordFormView.prototype.createsWord = function(form){
-  // console.log(form);
   const newWord ={
     English: form.english.value,
     translation: {

@@ -9,7 +9,7 @@ db.words.insertMany([
                     Dutch: "Bedankt"},
       audio:{
         Chinese:"audio/chinese/thank_you_c.m4a",
-        German:"audio/german/ineedajobby.m4a",
+        German:"audio/german/thankyou.m4a",
         Dutch:"audio/dutch/bedankt.ogg.mp3",
       }
     },
@@ -117,19 +117,19 @@ db.quiz.insertMany([
   {
     English: "friend",
     Chinese: "朋友",
-    German: "freund",
-    Dutch: "vriend"
+    German: "Freund",
+    Dutch: "Vriend"
   },
   {
     English: "brother",
     Chinese: "哥哥",
-    German: "bruder",
-    Dutch: "broer"
+    German: "Bruder",
+    Dutch: "Broer"
   },
   {
     English: "tomato",
     Chinese: "番茄",
-    German: "tomate",
-    Dutch: "tomaat"
+    German: "Tomate",
+    Dutch: "Tomaat"
   }
 ]);
