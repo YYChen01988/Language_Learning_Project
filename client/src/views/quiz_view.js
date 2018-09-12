@@ -23,7 +23,6 @@ QuizView.prototype.render = function (flashcard) {
   checkAnswerButton.addEventListener('click', (event) => {
     const quiz = new Quiz();
     quiz.checkAnswer(textBox.value.toLowerCase(), this.question[0].toLowerCase());
-    console.log(textBox.value);
   });
 
   this.questionsContainer.appendChild(questionContainer);
@@ -38,7 +37,7 @@ QuizView.prototype.createForeignPhrase = function() {
 QuizView.prototype.renderCorrect = function () {
   const questionContainer = document.createElement('div');
   const correct = document.createElement('h2');
-  correct.innerHTML = '<font color="green">Correct!</font>';
+  correct.innerHTML = '<font color="green">Correct!</font><br><img src="images/smiley.png" width="50px" height="50px"/>';
   questionContainer.appendChild(correct);
   this.questionsContainer.appendChild(questionContainer);
 };
@@ -47,7 +46,7 @@ QuizView.prototype.renderFalse = function () {
 
   const questionContainer = document.createElement('div');
   const wrong = document.createElement('h2');
-  wrong.innerHTML = '<font color="red">Try again</font>';
+  wrong.innerHTML = '<font color="red">Try again</font><br><img src="images/frownie.png" width="45px" height="45px"/>';
   questionContainer.appendChild(wrong);
   this.questionsContainer.appendChild(questionContainer);
 };
