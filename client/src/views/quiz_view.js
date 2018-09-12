@@ -22,9 +22,9 @@ QuizView.prototype.render = function (flashcard) {
   questionContainer.appendChild(checkAnswerButton);
   checkAnswerButton.addEventListener('click', (event) => {
     const quiz = new Quiz();
-    quiz.checkAnswer(textBox.value, this.question[0]);
+    quiz.checkAnswer(textBox.value.toLowerCase(), this.question[0].toLowerCase());
+    console.log(textBox.value);
   });
-
 
   this.questionsContainer.appendChild(questionContainer);
 };
@@ -36,45 +36,20 @@ QuizView.prototype.createForeignPhrase = function() {
 };
 
 QuizView.prototype.renderCorrect = function () {
-
   const questionContainer = document.createElement('div');
-  const text = document.createElement('h2');
-  // text.textContent = "Correct!";
-  text.innerHTML = '<font color="green">Correct!</font>';
-  questionContainer.appendChild(text);
+  const correct = document.createElement('h2');
+  correct.innerHTML = '<font color="green">Correct!</font>';
+  questionContainer.appendChild(correct);
   this.questionsContainer.appendChild(questionContainer);
 };
 
 QuizView.prototype.renderFalse = function () {
 
   const questionContainer = document.createElement('div');
-  const text = document.createElement('h2');
-  // text.textContent = "Try again";
-  text.innerHTML = '<font color="red">Try again</font>';
-  questionContainer.appendChild(text);
+  const wrong = document.createElement('h2');
+  wrong.innerHTML = '<font color="red">Try again</font>';
+  questionContainer.appendChild(wrong);
   this.questionsContainer.appendChild(questionContainer);
 };
 
 module.exports = QuizView;
-
-
-QuizView.prototype.renderCorrect = function () {
-
-  const questionContainer = document.createElement('div');
-  const foreign = document.createElement('h2');
-  foreign.textContent = "Hello, World"
-  questionContainer.appendChild(foreign);
-  this.questionsContainer.appendChild(questionContainer);
-};
-
-QuizView.prototype.renderFalse = function () {
-
-  const questionContainer = document.createElement('div');
-  const foreign = document.createElement('h2');
-  foreign.textContent = "Goodbye, World"
-  questionContainer.appendChild(foreign);
-  this.questionsContainer.appendChild(questionContainer);
-};
-
-module.exports = QuizView;
-
