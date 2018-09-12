@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   flashcardListView.bindEvents();
 
   const quizListContainer = document.querySelector('#quiz');
-  const quizListView = new QuizListView(quizListContainer);
+  const quizListView = new QuizListView(quizListContainer, answerListView);
   quizListView.bindEvents();
 
   const mainMap = document.querySelector('#map-container');
