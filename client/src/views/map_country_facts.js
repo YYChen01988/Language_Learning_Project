@@ -9,17 +9,22 @@ MapCountryFacts.prototype.bindEvents = function(){
     const countries = event.detail;
     this.container.innerHTML = "";
     countries.forEach((country) => {
+
+      const countrys = document.createElement('div');
+
       const header = document.createElement('strong');
-      header.textContent = country.nativeName;
-      this.container.appendChild(header);
+      header.textContent = "Native name: " + country.nativeName;
+      countrys.appendChild(header);
 
       const nativeName = document.createElement('p');
-      nativeName.textContent = country.name;
-      this.container.appendChild(nativeName);
+      nativeName.textContent = "Country name: " + country.name;
+      countrys.appendChild(nativeName);
 
       const population = document.createElement('p');
-      population.textContent = "Population:" + country.population;
-      this.container.appendChild(population);
+      population.textContent = "Population: " + country.population;
+      countrys.appendChild(population);
+
+      this.container.appendChild(countrys);
     });
   });
 };

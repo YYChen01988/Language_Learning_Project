@@ -10,6 +10,11 @@ body {
   height: 300px;
 }
 
+.country {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 footer, .translate-function {
   text-align: center;
   display: inline-block;
