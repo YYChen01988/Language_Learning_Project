@@ -9,16 +9,12 @@ const MapWrapper = function(container){
   this.markers = []
 }
 
-
 MapWrapper.prototype.bindEvents = function(){
   PubSub.subscribe("Map:countries-objects-ready", (event) => {
-    // map.removeLayer(marker);
     this.markers.forEach((m)=>{
       this.map.removeLayer(m);
     });
     this.markers = [];
-    // console.log(this.markers);
-
     const countries = event.detail;
     countries.forEach((country) => {
       var coordinates = country.latlng;
@@ -26,9 +22,7 @@ MapWrapper.prototype.bindEvents = function(){
       var m = L.marker(coordinates);
       this.markers.push(m);
       m.addTo(this.map);
-
     });
-
   });
 };
 

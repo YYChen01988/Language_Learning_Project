@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const quiz = new Quiz(quizUrl);
   quiz.getQuizData();
 
-  // const quizView = new QuizView();
-  // quizView.bindEvents();
   const selectE = document.querySelector('#answer');
   const answerListView = new AnswerListView(selectE);
   answerListView.bindEvents();

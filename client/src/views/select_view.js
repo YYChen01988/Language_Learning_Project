@@ -23,14 +23,13 @@ FlashcardSelectView.prototype.bindEvents = function() {
 
 FlashcardSelectView.prototype.populate = function(languages) {
   var languageOptions = [];
- languages.forEach((language, index) => {
-   languageOptions = languageOptions.concat(Object.keys(language.translation));
- })
- languageOptions = new Set([...languageOptions]);
- // console.log("Language Options", languageOptions);
- languageOptions.forEach((element, index) => {
-   const languageElement = this.createOption(element, index);
-   this.element.appendChild(languageElement);
+  languages.forEach((language, index) => {
+    languageOptions = languageOptions.concat(Object.keys(language.translation));
+  })
+  languageOptions = new Set([...languageOptions]);
+  languageOptions.forEach((element, index) => {
+    const languageElement = this.createOption(element, index);
+    this.element.appendChild(languageElement);
  });
 }
 

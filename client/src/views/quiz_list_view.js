@@ -31,6 +31,7 @@ QuizListView.prototype.clearList = function() {
   this.container.innerHTML = '';
 }
 
+
 QuizListView.prototype.render = function(quizQuestionPair) {
     const quizView = new QuizView(this.container, quizQuestionPair);
     quizView.render();

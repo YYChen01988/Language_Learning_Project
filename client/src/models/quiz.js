@@ -9,13 +9,11 @@ const Quiz = function(url) {
 Quiz.prototype.getQuizData = function(){
   this.request.get()
   .then((quiz) => {
-    // PubSub.publish('Quiz:quiz-data-ready', quiz);
     this.publishQuizByLanguage(quiz);
   })
   .catch(console.error);
 };
 
-// WE NEED TO RETURN THE LANGUAGE OBJECT(?) THAT MATCHES LANGUAGE SELECTED IN THE DROPDOWN
 Quiz.prototype.publishQuizByLanguage = function(quiz){
   this.quiz = quiz;
   PubSub.subscribe("SelectView:change", (event) => {
@@ -27,14 +25,14 @@ Quiz.prototype.publishQuizByLanguage = function(quiz){
     });
   };
 
-  // write checkAnswer method here --> use this but move it?
-  Quiz.prototype.checkAnswer = function(textBoxValue, english){
-    if (textBoxValue === english){
-      var answer = true;
-    } else {
-      var answer = false;
-    };
-    PubSub.publish("Quiz:correct-answer", answer);
+// write checkAnswer method here --> use this but move it?
+Quiz.prototype.checkAnswer = function(textBoxValue, english){
+  if (textBoxValue === english){
+    var answer = true;
+  } else {
+    var answer = false;
   };
+  PubSub.publish("Quiz:correct-answer", answer);
+};
 
 module.exports = Quiz;

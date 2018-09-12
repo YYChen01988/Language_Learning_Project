@@ -5,8 +5,6 @@ const FlashcardView = function(container, phrase){
   this.phrase = phrase;
 }
 
-// THIS IS WHERE THE FLASHCARD IS RENDERED
-
 FlashcardView.prototype.render = function (flashcard) {
   const phraseContainer = document.createElement('div');
   phraseContainer.classList.add('flashcard');
@@ -17,16 +15,6 @@ FlashcardView.prototype.render = function (flashcard) {
   const english = this.createEnglishPhrase();
   phraseContainer.appendChild(english);
 
-  // const audioButton = document.createElement('AUDIO');
-  // audioButton.setAttribute("controls", "controls");
-  // // buttonTitle = document.createTextNode("Click for pronounciation");
-  // // audioButton.appendChild(buttonTitle);
-  // const audio = this.createAudioElement();
-  // audioButton.appendChild(audio);
-  // phraseContainer.appendChild(audioButton);
-  // audioButton.addEventListener('click', (event) => {
-  // audio.play(event);
-
   const buttonContainer = document.createElement('div');
   const audioButton = document.createElement('button');
   audioButton.classList.add('audiobutton')
@@ -36,8 +24,7 @@ FlashcardView.prototype.render = function (flashcard) {
   audioButton.appendChild(audio);
   phraseContainer.appendChild(audioButton);
   audioButton.addEventListener('click', (event) => {
-  audio.play(event);
-  })
+  audio.play(event);})
 
   this.phrasesContainer.appendChild(phraseContainer);
 };
