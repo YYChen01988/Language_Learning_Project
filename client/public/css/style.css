@@ -48,10 +48,10 @@ a {
   text-decoration: none;
 }
 
-p {
-  padding-left: 15px;
+/* p { */
+  /* padding-left: 15px;
   padding-right: 15px;
-}
+} */
 
 #logo {
   padding-top: 20px;
@@ -87,10 +87,6 @@ p {
   background-color: grey;
 }
 
-#chosen-language:focus {
-  outline:0;
-}
-
 /* NEXT/PREVIOUS BUTTONS IN FLASHCARD TAB */
 
 .audiobutton {
@@ -109,10 +105,11 @@ p {
 .quizContainer {
   margin-top: 40px;
   margin-left: 30px;
+  margin: auto;
 }
 
 .checkButton {
-  background-color: #008CBA;
+  background-color: #f9962e;
   border: none;
   color: white;
   padding-top: 8px;
@@ -145,7 +142,7 @@ p {
   border-radius: 6px;
 }
 
-.button:focus,.audiobutton:focus,.checkButton:focus {
+.button:focus,.audiobutton:focus,.checkButton:focus,#chosen-language:focus{
   outline:0;
 }
 
@@ -310,4 +307,13 @@ input[type=submit]:hover {
   float: left;
   width: 60%;
   margin-top: 6px;
+}
+
+.questionContainer p {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.questionContainer button  {
+  margin-top: 20px;
 }

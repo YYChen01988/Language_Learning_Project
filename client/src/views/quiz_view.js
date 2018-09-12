@@ -8,6 +8,7 @@ const QuizView = function(container, question){
 
 QuizView.prototype.render = function (flashcard) {
   const questionContainer = document.createElement('div');
+  questionContainer.classList.add('questionContainer');
 
   const foreign = this.createForeignPhrase();
   questionContainer.appendChild(foreign);
