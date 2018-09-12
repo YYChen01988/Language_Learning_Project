@@ -115,21 +115,51 @@ db.words.insertMany([
   ]);
 db.quiz.insertMany([
   {
-    English: "friend",
+    English: "Friend",
     Chinese: "朋友",
     German: "Freund",
     Dutch: "Vriend"
   },
   {
-    English: "brother",
+    English: "Brother",
     Chinese: "哥哥",
     German: "Bruder",
     Dutch: "Broer"
   },
   {
-    English: "tomato",
+    English: "Tomato",
     Chinese: "番茄",
     German: "Tomate",
     Dutch: "Tomaat"
+  },
+  {
+    English: "Dictionary",
+    Chinese: "字典",
+    German: "Wörterbuch",
+    Dutch: "Woordenboek"
+  },
+  {
+    English: "Gloves",
+    Chinese: "手套",
+    German: "Handschuhe",
+    Dutch: "Handschoenen"
+  },
+  {
+    English: "Pineapple",
+    Chinese: "菠蘿",
+    German: "Ananas",
+    Dutch: "Ananas"
+  },
+  {
+    English: "Parents",
+    Chinese: "父母",
+    German: "Eltern",
+    Dutch: "Ouders"
+  },
+  {
+    English: "Dragon",
+    Chinese: "龍",
+    German: "Drachen",
+    Dutch: "Draak"
   }
 ]);
