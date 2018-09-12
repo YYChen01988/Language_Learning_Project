@@ -161,5 +161,65 @@ db.quiz.insertMany([
     Chinese: "龍",
     German: "Drachen",
     Dutch: "Draak"
+  },
+  {
+    English: "Hungry",
+    Chinese: "飢餓",
+    German: "Hungrig",
+    Dutch: "Hongerig"
+  },
+  {
+    English: "Thank you",
+    Chinese: "你好",
+    German: "Danke",
+    Dutch: "Bedankt"
+  },
+  {
+    English: "Swim",
+    Chinese: "游泳",
+    German: "Schwimmen",
+    Dutch: "Zwemmen"
+  },
+  {
+    English: "Please",
+    Chinese: "請",
+    German: "Bitte",
+    Dutch: "Alsjeblieft"
+  },
+  {
+    English: "Beer",
+    Chinese: "啤酒",
+    German: "Bier",
+    Dutch: "Bier"
+  },
+  {
+    English: "Wine",
+    Chinese: "紅酒",
+    German: "Wein",
+    Dutch: "Wijn"
+  },
+  {
+    English: "Cycling",
+    Chinese: "循環",
+    German: "Radfahren",
+    Dutch: "Fietsen"
+  },
+  {
+    English: "Good day",
+    Chinese: "美好的一天",
+    German: "Schönen Tag",
+    Dutch: "Goedendag"
+  },
+  {
+    English: "Goodbye",
+    Chinese: "再見",
+    German: "Auf Wiedersehen",
+    Dutch: "Tot ziens"
+  },
+  {
+    English: "Learning",
+    Chinese: "學習",
+    German: "Lernen",
+    Dutch: "Leren"
   }
 ]);
