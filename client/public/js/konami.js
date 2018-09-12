@@ -43,5 +43,4 @@ function activateCheats() {
   var audio = new Audio('audio/trumpet.wav');
   audio.play();
 
-  alert("Congratulations!");
 }
