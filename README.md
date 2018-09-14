@@ -27,3 +27,12 @@ A user should be able to:
 - https://developer.oxforddictionaries.com An open-source dictionary API (Pim has key)
 
 (Put the API key file in .gitignore)
+
+
+
+## Start App
+
+- npm run build
+- npm run server:dev
+- mongod (kill allmongod or go to activity monitor to make sure mongo is not running)
+- mongo < server/db/seeds.js
