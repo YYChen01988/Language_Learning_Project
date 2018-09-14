@@ -36,3 +36,4 @@ A user should be able to:
 - npm run server:dev
 - mongod (kill allmongod or go to activity monitor to make sure mongo is not running)
 - mongo < server/db/seeds.js
+- open localhost:3000 on page
